@@ -8,12 +8,14 @@ import lombok.Setter;
 import javax.validation.Valid;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Getter
 @Setter
-public class UserDTO {
+public class UserDTO implements Serializable {
+    private static final long serialVersionUID = -5577579081118070434L;
 
     private Long id;
     private String name;

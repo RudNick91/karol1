@@ -6,10 +6,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.Email;
+import java.io.Serializable;
 
 @Getter
 @Setter
-public class ContactDTO {
+public class ContactDTO implements Serializable {
+    private static final long serialVersionUID = -5577579081118070434L;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Long id;
